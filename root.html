@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>루트</title>
+    <style>
+        body {
+            background-color: rgb(255, 109, 109);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>루트</h1>
+    <details>
+        <summary>루트가 뭔가요?</summary>
+        <p style="color: rgb(182, 255, 129);">루트는 어떤 수를 제곱했을 때 그 수가 되는 수를 말합니다.</p>
+        <p style="background-color: white; color: rgb(129, 179, 255);">예를 들어, √9 = 3입니다. 왜냐하면 3을 제곱하면 9가 되기 때문입니다.</p>
+    </details>
+    <input type="number" id="num" placeholder="숫자를 입력하세요">
+    <button onclick="calculateSquareRoot()">루트 계산</button>
+    <p id="result"></p>
+    <script>
+        function calculateSquareRoot() {
+            const num = document.getElementById('num').value;
+            if (num < 0) {
+                document.getElementById('result').innerText = '음수의 루트는 실수가 아닙니다.';
+            } else {
+                const squareRoot = Math.sqrt(num);
+                document.getElementById('result').innerText = `√${num} = ${squareRoot}`;
+            }
+        }
+    </script>
+    <style>
+        a {
+            text-decoration: none;
+            background-color: rgb(0, 234, 255);
+            color: rgb(60, 255, 0);
+            font-size: 20 px;
+        }
+        
+        a:hover {
+            text-decoration: none;
+            background-color: rgb(60, 255, 0);
+            color: rgb(0, 234, 255);
+            font-size: 20 px;
+        }
+    </style>
+</body>
+
+</html>
